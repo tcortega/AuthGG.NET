@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CA59D2B7-AF7C-4463-ABD7-959F4976E5FC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthGG.Client", "AuthGG.Client", "{DD14AAA9-4E6B-426B-A724-9FB54FBC3D91}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthGGClient", "src\AuthGGClient\AuthGGClient.csproj", "{335D13C7-5C4D-43E7-98E8-56A7157DF281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthGG.Client", "AuthGG.Client\AuthGG.Client.csproj", "{93F3120F-3CF2-4B19-A327-7E3CD4F4FAE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{335D13C7-5C4D-43E7-98E8-56A7157DF281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{335D13C7-5C4D-43E7-98E8-56A7157DF281}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{335D13C7-5C4D-43E7-98E8-56A7157DF281}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{335D13C7-5C4D-43E7-98E8-56A7157DF281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F3120F-3CF2-4B19-A327-7E3CD4F4FAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F3120F-3CF2-4B19-A327-7E3CD4F4FAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F3120F-3CF2-4B19-A327-7E3CD4F4FAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F3120F-3CF2-4B19-A327-7E3CD4F4FAE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{335D13C7-5C4D-43E7-98E8-56A7157DF281} = {CA59D2B7-AF7C-4463-ABD7-959F4976E5FC}
+		{93F3120F-3CF2-4B19-A327-7E3CD4F4FAE1} = {DD14AAA9-4E6B-426B-A724-9FB54FBC3D91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4A98D32-DB53-4D4F-8748-64336F242C81}
