@@ -19,7 +19,7 @@ namespace tcortega.AuthGG.Client.Utilities
         {
             return obj.GetType().GetProperties()
                 .ToDictionary(
-                    prop => prop.Name,
+                    prop => prop.Name.ToLower(),
                     prop => HttpUtility.UrlEncode(prop.GetValue(obj).ToString())
                 );
         }

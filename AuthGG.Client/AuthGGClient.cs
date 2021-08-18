@@ -43,14 +43,14 @@ namespace tcortega.AuthGGClient
             return new AuthGGClient(aid, apiKey, secret, httpClient);
         }
 
-        public async Task<AppInfo> GetAppInfo()
+        public async Task<AppInfo> GetAppInfoAsync()
         {
             var requestData = new AppInfoPayload
             {
-                type = "info",
-                aid = _aid,
-                secret = _secret,
-                apikey = _apiKey
+                Type = "info",
+                Aid = _aid,
+                Secret = _secret,
+                ApiKey = _apiKey
             };
 
             using var content = new FormUrlEncodedContent(requestData.GetUrlEncodedQuery());
@@ -59,11 +59,47 @@ namespace tcortega.AuthGGClient
             var appInfoResponse = await response.Content.ReadFromJsonAsync<AppInfo>();
             // Validation needed since API returns Status 200 for everything, even errors... :(
             if (!appInfoResponse.IsSuccess)
-            {
                 throw new InvalidAuthDataException(appInfoResponse.Message);
-            }
 
             return appInfoResponse;
+        }
+
+        public async Task<LoginResponse> LoginAsync(string username, string password, string hwid)
+        {
+            var requestData = new LoginPayload
+            {
+                Type = "login",
+                Aid = _aid,
+                ApiKey = _apiKey,
+                Secret = _secret,
+                Username = username,
+                Password = password,
+                Hwid = hwid
+            };
+
+            using var content = new FormUrlEncodedContent(requestData.GetUrlEncodedQuery());
+            using var response = await _httpClient.PostAsync(_baseUrl, content);
+
+            return await response.Content.ReadFromJsonAsync<LoginResponse>();
+        }
+
+        public async Task<LoginResponse> RegisterAsync(string username, string password, string email, string license, string hwid)
+        {
+            var requestData = new LoginPayload
+            {
+                Type = "register",
+                Aid = _aid,
+                ApiKey = _apiKey,
+                Secret = _secret,
+                Username = username,
+                Password = password,
+                Hwid = hwid
+            };
+
+            using var content = new FormUrlEncodedContent(requestData.GetUrlEncodedQuery());
+            using var response = await _httpClient.PostAsync(_baseUrl, content);
+
+            return await response.Content.ReadFromJsonAsync<LoginResponse>();
         }
     }
 }
