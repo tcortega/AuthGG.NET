@@ -10,6 +10,6 @@ namespace tcortega.AuthGG.Client.DTOs
         [JsonPropertyName("message")]
         public string Message { get; set; }
 
-        public bool IsSuccess { get => Result != "failed"; }
+        public virtual bool IsSuccess { get => Result != "failed"; }
     }
 }

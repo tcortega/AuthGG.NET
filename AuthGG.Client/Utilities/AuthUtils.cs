@@ -61,5 +61,10 @@ namespace tcortega.AuthGG.Client.Utilities
             var hwidByteArr = MD5.Create().ComputeHash(Encoding.UTF8.GetBytes(hwid));
             return Convert.ToBase64String(hwidByteArr);
         }
+
+        public static string GetPCUser()
+        {
+            return Environment.UserName;
+        }
     }
 }

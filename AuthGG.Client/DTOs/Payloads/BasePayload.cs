@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace tcortega.AuthGG.Client.DTOs.Payloads
+﻿namespace tcortega.AuthGG.Client.DTOs
 {
     public class BasePayload
     {

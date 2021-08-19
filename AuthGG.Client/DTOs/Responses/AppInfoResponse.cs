@@ -2,7 +2,7 @@
 
 namespace tcortega.AuthGG.Client.DTOs
 {
-    public class AppInfo : BaseResponse
+    public class AppInfoResponse : BaseResponse
     {
         [JsonPropertyName("status")]
         public string Status { get; set; }

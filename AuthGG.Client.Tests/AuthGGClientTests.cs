@@ -1,8 +1,5 @@
-﻿using Xunit;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using tcortega.AuthGG.Client.Exceptions;
+﻿using tcortega.AuthGG.Client.Exceptions;
+using Xunit;
 
 namespace tcortega.AuthGGClient.Tests
 {

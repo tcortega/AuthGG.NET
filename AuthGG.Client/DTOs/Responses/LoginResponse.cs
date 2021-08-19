@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Text.Json.Serialization;
+using tcortega.AuthGG.Client.Utilities;
 
 namespace tcortega.AuthGG.Client.DTOs
 {
@@ -31,6 +31,7 @@ namespace tcortega.AuthGG.Client.DTOs
         [JsonPropertyName("ip")]
         public string Ip { get; set; }
 
+        [JsonConverter(typeof(DateTimeOffsetConverter))]
         [JsonPropertyName("expiry")]
         public DateTimeOffset Expiry { get; set; }
 
